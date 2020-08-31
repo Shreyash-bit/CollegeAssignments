@@ -25,7 +25,7 @@ int main(){
   int arr[i];
   fo(j,i){
     printf("Enter Element number %d : ", j + 1);
-    scanf("%d", arr[j]);
+    scanf("%d", &arr[j]);
   }
   parr = &arr[0];
   OddEvenArray(parr,i);
