@@ -19,11 +19,12 @@ int main(){
   int i, j;
   printf("Enter size of Array : ");
   scanf("%d", &i);
-  int* arr;
-  arr = (int*)malloc(i * sizeof(int));
+  int *parr;
+  int arr[i];
   fo(j,i){
     printf("\nEnter Element Number %d : ", j + 1);
-    scanf("%d", arr + j);
+    scanf("%d", &arr[j]);
   }
-  OddEvenIndexSum(arr,i);
+  parr = &arr[0];
+  OddEvenIndexSum(parr,i);
 }

@@ -18,14 +18,15 @@ void OddEvenArray(int *arr, int size){
 }
 
 int main(){
-  int i,j,k;
-  int* arr;
+  int i,j;
+  int *parr;
   printf("Enter size of Array");
   scanf("%d", &i);
-  arr = (int*)malloc(i * sizeof(int));
+  int arr[i];
   fo(j,i){
     printf("Enter Element number %d : ", j + 1);
-    scanf("%d", arr + j);
+    scanf("%d", arr[j]);
   }
-  OddEvenArray(arr,i);
+  parr = &arr[0];
+  OddEvenArray(parr,i);
 }

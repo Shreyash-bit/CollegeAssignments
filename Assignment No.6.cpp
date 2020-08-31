@@ -13,14 +13,15 @@ int SumOfArray(int *arr, int size){
 }
 
 int main(){
-  int* arr;
-  int i,j,k,l;
+  int *parr;
+  int i,j;
   printf("Enter Size of array :");
   scanf("%d", &i);
-  arr = (int*)malloc(i * sizeof(int));
+  int arr[i];
   fo(j,i){
     printf("\nEnter element number %d :", j + 1);
-    scanf("%d", arr + j);
+    scanf("%d", &arr[j]);
   }
-  printf("\nThe sum of elements is %d", SumOfArray(arr, i));
+  parr = &arr[0];
+  printf("\nThe sum of elements is %d", SumOfArray(parr, i));
 }
