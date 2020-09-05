@@ -18,18 +18,18 @@ int main(){
   int arr3[i];
   printf("\nEnter elements of 1st array : ");
   for(int j = 0; j < i; ++j){
-    scanf("%d", &arr[j]);
+    scanf("%d", &arr1[j]);
   }
   printf("\nEnter elements of 2nd array : ");
   for(int k = 0; k < i; ++k){
-    scanf("%d", &arr[k];)
+    scanf("%d", &arr2[k]);
   }
   int *arr1ptr, *arr2ptr, *arr3ptr;
   arr1ptr = &arr1[0];
   arr2ptr = &arr2[0];
   arr3ptr = &arr3[0];
   Add(arr1ptr, arr2ptr, arr3ptr, i);
-  printf("\nAdded Array is :\n")
+  printf("\nAdded Array is :\n");
   while(i--){
     printf("%d ", &arr3[i - 1]);
   }
