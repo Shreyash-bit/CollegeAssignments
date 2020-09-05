@@ -13,20 +13,17 @@ int main(){
   int i, size;
   printf("Enter Size of Array");
   scanf("%d", &i);
-  size = i;
   int arr[i];
   int arr2[i];
-  while(i--){
-    scanf("%d", &arr[i]);
+  for(int z = 0; z < i; z++){
+    scanf("%d", &arr[z]);
   }
   int *arrptr, *arr2ptr;
   arrptr = &arr[0];
-  arr2ptr = &arr[size - 1];
+  arr2ptr = &arr2[i - 1];
+  RevArray(arrptr, arr2ptr, i);
   printf("\nReverse Array is :");
-  while(size--){
-    printf("%d ", arr[size - 1]);
-    if(size == 0){
-      break;
-    }
+  for(int m = 0; m < i; m++){
+    printf("%d ", arr2[m]);
   }
 }
