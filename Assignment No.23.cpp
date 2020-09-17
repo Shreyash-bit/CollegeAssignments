@@ -31,11 +31,10 @@ int main(){
  }
  int count = 0;
  while(size--){
-   if(checkforpalindrome(arr[size - 1]) == true){
+   if(checkforpalindrome(arr[size]) == true){
 
-     printf("\nThe Palindrome number is : %d", arr[size - 1]);
+     printf("\nThe Palindrome number is : %d", arr[size]);
      count++;
    }
  }
-
 }
