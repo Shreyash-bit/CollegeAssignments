@@ -31,4 +31,7 @@ int main(){
         printf("\nEnter Salary of Employee : ");
         scanf("%d", &employees[i].salary);
     }
+    for(int j = 0; j < 5; j++){
+        getdata(employees[j]);
+    }
 }
