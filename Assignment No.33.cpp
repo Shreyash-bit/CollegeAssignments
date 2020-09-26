@@ -21,6 +21,7 @@ void getdata(emp_data emp){
 
 int main(){
     emp_data employees[5];
+    char stop[4];
     for(int i = 0; i < 5; ++i){
         printf("\nEnter Name of Employee : ");
         gets(employees[i].name);
@@ -30,6 +31,9 @@ int main(){
         scanf("%lli", &employees[i].mobilenumber);
         printf("\nEnter Salary of Employee : ");
         scanf("%d", &employees[i].salary);
+        if(scanf("%s", &stop) && stop[4] == "stop"){
+            break;
+        }
     }
     for(int j = 0; j < 5; j++){
         getdata(employees[j]);
