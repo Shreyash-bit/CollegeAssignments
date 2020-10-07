@@ -51,6 +51,67 @@ bool palindrome(char str[100]){
     return flag;
 }
 
-int main(){
+bool string_compare(char str[100], char str2[100]){
+    int strsize = sizeof(str) / sizeof(char);
+    for(int i = 0; i < strsize; ++i){
+        if(str[i] != str2[i]) return false;
+    }
+    return true;
+}
 
+void string_copy(char str[100], char str2[100]){ //copies from str to str2
+    int strsize = sizeof(str) / sizeof(char);
+    int str2size = sizeof(str2) / sizeof(char);
+    for(int i = 0; i < strsize; i++){
+        str2[strsize + i] += str[i];
+    }
+    return;    
+}
+
+
+
+int main(){
+    printf("----------------------Atharva Naphade--------------------\n");
+    printf("---------------------------SE 8--------------------------\n");
+    printf("---------------------------22404-------------------------\n");
+    printf("-------------------Assignment No.1 Part A----------------\n");
+    printf("1.Check Substring\n2.Check for Palindrome\n3.Compare Strings\n4.Copy String to another one\n5.Reverse a String\nEnter option : ");
+    int i;
+    repeat:
+    scanf("%d", &i);
+    switch(i){
+        case 1:
+           char str[100]; char sub[5];
+           printf("\nEnter String : ");
+           gets(str);
+           printf("\nEnter SubString : ");
+           gets(sub);
+           if(substr(sub,str)) printf("\nSub String is present in the String");
+        case 2:
+           char str[100];
+           printf("\nEnter String : ");
+           gets(str);
+           if(palindrome(str)) printf("\nString is Palindrome");
+        case 3:
+           char str[100]; char str2[100];
+           printf("\nEnter First String : ");
+           gets(str);
+           printf("\nEnter 2nd String : ");
+           gets(str2);
+           if(string_compare(str, str2)) printf("\nBoth Strings are Equal");
+        case 4:
+           char str[100]; char str2[100];
+           printf("\nEnter 1st String : ");
+           gets(str);
+           printf("\nEnter 2nd String : ");
+           gets(str2);
+           string_copy(str, str2);
+           printf("\nString copied! The String is : %s", str2);
+        case 5:
+           char str[100];
+           printf("\nEnter a string : ");
+           gets(str);
+           printf("\nThe Reverse of the string is : %s", reversestr(str));
+    }
+    goto repeat;
 }
