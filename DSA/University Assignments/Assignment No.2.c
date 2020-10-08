@@ -15,8 +15,8 @@ struct database{
 typedef struct database db;
 
 void display_data(db list){
-    printf("\nComponent : %s", list.component);
-    printf("\nSpecial Symbol : %s", list.symbol);
+    puts(list.component);
+    printf("\nSpecial Symbol : %c", list.symbol);
     printf("\nNumber of Components : %d", list.number);
     printf("\nCost of Component : %d", list.cost);
 }
@@ -24,10 +24,11 @@ void display_data(db list){
 int search_data(db list[5], char search_symbol){
     int x;
     for(int i = 0; i < 5; ++i){
-       if(search_symbol == list[i].symbol)
+       if(search_symbol == list[i].symbol){
           x = i;
           return x;
           break; 
+       }
     }
 }
 
@@ -90,22 +91,22 @@ int main(){
     printf("Enter the data : ");
     db list[5];
     for(int i = 0; i < 5; ++i){
-        char component[100];
-        char symbol;
-        int cost;
-        int number;
+        char component1[100];
+        char symbol1;
+        int cost1;
+        int number1;
         printf("\nEnter the Component Name : ");
-        gets(component);
+        gets(component1);
         printf("\nEnter the Component Symbol : ");
-        gets(symbol);
-        printf("\nEnter the Number of Component %s : ", component);
-        scanf("%d", &number);
-        printf("\nEnter the Cost of the Component %s : ", component);
-        scanf("%d", &cost);
-        list[i].component = component;
-        list[i].symbol = symbol;
-        list[i].number = number;
-        list[i].cost = cost;
+        gets(symbol1);
+        printf("\nEnter the Number of Component %s : ", component1);
+        scanf("%d", &number1);
+        printf("\nEnter the Cost of the Component %s : ", component1);
+        scanf("%d", &cost1);
+        list[i].component = component1;
+        list[i].symbol = symbol1;
+        list[i].number = number1;
+        list[i].cost = cost1;
     }
     while(true){
        printf("\nEnter the opearation you want to do\n1.Display Data\n2.Search Data\n3.Modify Data\n4.Sort Data");
