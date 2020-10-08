@@ -47,7 +47,6 @@ void modify_data(db list[5]){
            gets(input_char1);
            list[z].component = input_char1;
         case 2:
-           char search_char1;
            char input_char2;
            printf("\nEnter the Component Symbol you want to replace : ");
            gets(search_char1);
@@ -56,7 +55,6 @@ void modify_data(db list[5]){
            gets(input_char2);
            list[z].symbol = input_char2;
         case 3:
-           char search_char1;
            int input_numbers;
            printf("\nEnter the Component Symbol you want to replace : ");
            gets(search_char1);
@@ -65,7 +63,6 @@ void modify_data(db list[5]){
            scanf("%d", &input_numbers);
            list[z].number = input_numbers;
         case 4:
-           char search_char1;
            int input_cost;
            printf("\nEnter the Component Symbol you want to replace : ");
            gets(search_char1);
